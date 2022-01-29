@@ -7,9 +7,9 @@ random3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
 
 
 #Person Choice the Numbers
-number1 = int(input("Wähle eine Zahl zwischen 1 und 49:"))
-number2 = int(input("Wähle eine Zahl zwischen 1 und 49:"))
-number3 = int(input("Wähle eine Zahl zwischen 1 und 49:"))
+number1 = int(input("Choose a Number between 1 and 49:"))
+number2 = int(input("Choose a Number between 1 and 49:"))
+number3 = int(input("Choose a Number between 1 and 49:"))
 
 
 #lottery numbers are drawn
@@ -20,11 +20,11 @@ lotto3 = random.choice(random3)
 
 #Check if a number is correct
 if number1 == lotto1 and number2 == lotto2 and number3 == lotto3:
-    print("Du hast Gewonnen! 500€")
+    print("You Won! 500€")
 else:
     if number1 == lotto1 and number2 == lotto2 or number1 == lotto1 and number3 == lotto3 or number2 == lotto2 and number3 == lotto3:
-        print("Du hast Zwei Zahlen richig! 150€")
+        print("You have 2 Numbers right! 150€")
     else:
         if number1 == lotto1 or number2 == lotto2 or number3 == lotto3:
-            print("Du hast eine Zahl richtig! 50€")
+            print("You have 1 Number right! 50€")
 
