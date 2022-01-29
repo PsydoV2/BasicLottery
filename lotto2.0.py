@@ -20,15 +20,11 @@ lotto3 = random.choice(random3)
 
 #Check if a number is correct
 if number1 == lotto1 and number2 == lotto2 and number3 == lotto3:
-    print("Du hast gewonnen!")
+    print("Du hast Gewonnen! 500€")
 else:
-    if number1 == random1:
-        print("Du hast die ERSTE Zahl RICHTIG!")
+    if number1 == lotto1 and number2 == lotto2 or number1 == lotto1 and number3 == lotto3 or number2 == lotto2 and number3 == lotto3:
+        print("Du hast Zwei Zahlen richig! 150€")
     else:
-        if number2 == random2:
-            print("Du hast die ZWEITE Zahl RICHTIG!")
-        else:
-            if number3 == random3:
-                print("DU hast die DRITTE Zahl RICHTIG!")
-            else:
-                print("Du hast KEINE Zahl RICHTIG!")
+        if number1 == lotto1 or number2 == lotto2 or number3 == lotto3:
+            print("Du hast eine Zahl richtig! 50€")
+
