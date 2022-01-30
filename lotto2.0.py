@@ -6,6 +6,9 @@ random2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
 random3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
 
 
+user_money = 500
+
+
 #Person Choice the Numbers
 number1 = int(input("Choose a Number between 1 and 49:"))
 number2 = int(input("Choose a Number between 1 and 49:"))
@@ -20,11 +23,23 @@ lotto3 = random.choice(random3)
 
 #Check if a number is correct
 if number1 == lotto1 and number2 == lotto2 and number3 == lotto3:
-    print("You Won! 500€")
+    print("You Won! 500$")
+    user_money += 500
+    print("You have ", user_money, "$")
+    
+elif number1 == lotto1 and number2 == lotto2 or number1 == lotto1 and number3 == lotto3 or number2 == lotto2 and number3 == lotto3:
+        print("You have 2 Numbers right! 150$")
+        user_money += 150
+        print("You have ", user_money, "$")
+
+elif number1 == lotto1 or number2 == lotto2 or number3 == lotto3:
+            print("You have 1 Number right! 50$")
+            user_money += 50
+            print("You have ", user_money, "$")
+
 else:
-    if number1 == lotto1 and number2 == lotto2 or number1 == lotto1 and number3 == lotto3 or number2 == lotto2 and number3 == lotto3:
-        print("You have 2 Numbers right! 150€")
-    else:
-        if number1 == lotto1 or number2 == lotto2 or number3 == lotto3:
-            print("You have 1 Number right! 50€")
+    print("You Lost!")
+    user_money -= 50
+    print("You have ", user_money, "$")
+
 
